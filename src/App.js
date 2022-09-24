@@ -1,24 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import {Route, Routes} from 'react-router-dom';
+
+
+import ContactApps from './views/ContactApss';
+import DetailContact from './views/DetailContact';
+import CategoryContact from './views/CategoryContact';
+import NotFound from './views/NotFound';
+
+// components
+import Navbar from './components/navbar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar/>
+      <Routes>
+        <Route path='/' element={<ContactApps/>} />
+        <Route path='/category/:category' element={<CategoryContact/>} />
+        <Route path='/detail/:id' element={<DetailContact/>} />
+        <Route path='*' element={<NotFound/>} />
+      </Routes>
+    </>    
   );
 }
 

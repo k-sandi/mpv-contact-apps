@@ -1,0 +1,18 @@
+{
+  "contacts": [
+    {
+      "name": "dev sandi edit 2",
+      "email": "kurniyasoft_edit@gmail.com",
+      "phone": "081809338150",
+      "category": "work",
+      "id": 1
+    },
+    {
+      "name": "sandi",
+      "email": "sandi@xyz.com",
+      "phone": "07969696",
+      "category": "family",
+      "id": 2
+    }
+  ]
+}
